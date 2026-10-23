@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download DraftCAD</title>
+  <meta name="description" content="DraftCAD — free AutoCAD-style 2D drafting and 3D modelling for Windows, macOS and Linux." />
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root {
+      --bg: #f4f6fa;
+      --card: #ffffff;
+      --text: #14211d;
+      --muted: #5b6b66;
+      --border: #dbe4e1;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --hero: linear-gradient(135deg, #3b82f6, #1e3a8a);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f141c;
+        --card: #18202b;
+        --text: #e6efec;
+        --muted: #9db0aa;
+        --border: #2a3442;
+        --accent: #60a5fa;
+        --accent-dark: #3b82f6;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--hero);
+      color: #fff;
+      padding: 56px 16px 64px;
+      text-align: center;
+    }
+    header img { width: 96px; height: 96px; }
+    h1 { font-size: clamp(30px, 6vw, 44px); margin: 12px 0 6px; }
+    .tagline { font-size: 18px; opacity: 0.92; margin: 0 auto; max-width: 560px; }
+    .primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      background: #fff;
+      color: #1e3a8a;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .primary:hover { transform: translateY(-1px); }
+    .sub { margin-top: 10px; font-size: 14px; opacity: 0.85; }
+    .sub a { color: #fff; }
+    main { max-width: 920px; margin: -32px auto 48px; padding: 0 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .card.mine { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent); }
+    .card h2 { margin: 0 0 4px; font-size: 20px; display: flex; align-items: center; gap: 8px; }
+    .card p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+    .dl {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 9px;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .dl:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+    .dl b { font-weight: 600; }
+    .dl span { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .badge { font-size: 11px; background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 99px; }
+    section.notes { margin-top: 28px; }
+    section.notes h3 { margin: 0 0 8px; }
+    section.notes li { margin-bottom: 6px; color: var(--muted); }
+    code { background: color-mix(in srgb, var(--muted) 15%, transparent); padding: 1px 6px; border-radius: 5px; font-size: 13px; }
+    footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 16px 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icon.png" alt="" />
+    <h1>DraftCAD</h1>
+    <p class="tagline">Free AutoCAD-style CAD. 2D drafting with command line, object snaps, layers and dimensions, plus 3D solids — opens and saves DXF.</p>
+    <a class="primary" id="primary" href="#all">Download</a>
+    <div class="sub" id="primary-sub">Windows · macOS · Linux — <a href="#all">all downloads</a></div>
+  </header>
+
+  <main id="all">
+    <div class="grid">
+      <div class="card" id="card-win">
+        <h2>Windows</h2>
+        <p>Windows 10 and 11</p>
+        <a class="dl" data-file="DraftCAD-Windows-Setup-x64.exe"><b>Installer (64-bit)</b><span>.exe</span></a>
+        <a class="dl" data-file="DraftCAD-Windows-Setup-arm64.exe"><b>Installer (ARM)</b><span>.exe</span></a>
+        <a class="dl" data-file="DraftCAD-Windows-Portable.exe"><b>Portable — no install</b><span>.exe</span></a>
+      </div>
+      <div class="card" id="card-mac">
+        <h2>macOS</h2>
+        <p>macOS 11 Big Sur or later</p>
+        <a class="dl" data-file="DraftCAD-macOS-AppleSilicon.dmg"><b>Apple Silicon (M1–M4)</b><span>.dmg</span></a>
+        <a class="dl" data-file="DraftCAD-macOS-Intel.dmg"><b>Intel Mac</b><span>.dmg</span></a>
+      </div>
+      <div class="card" id="card-linux">
+        <h2>Linux</h2>
+        <p>Ubuntu, Debian, Mint, Fedora, RHEL and others</p>
+        <a class="dl" data-file="DraftCAD-Linux-amd64.deb"><b>Ubuntu / Debian / Mint</b><span>.deb</span></a>
+        <a class="dl" data-file="DraftCAD-Linux-x86_64.rpm"><b>Fedora / RHEL / openSUSE</b><span>.rpm</span></a>
+        <a class="dl" data-file="DraftCAD-Linux-x86_64.AppImage"><b>Any Linux (AppImage)</b><span>.AppImage</span></a>
+        <a class="dl" data-file="DraftCAD-Linux-arm64.deb"><b>ARM64 (Raspberry Pi etc.)</b><span>.deb</span></a>
+        <a class="dl" data-file="DraftCAD-Linux-arm64.AppImage"><b>ARM64 AppImage</b><span>.AppImage</span></a>
+      </div>
+    </div>
+
+    <section class="notes card">
+      <h3>Installing</h3>
+      <ul>
+        <li><b>Windows:</b> if SmartScreen says “Windows protected your PC”, click <i>More info → Run anyway</i>.</li>
+        <li><b>macOS:</b> open the .dmg and drag DraftCAD to Applications. The first time, right-click the app → <i>Open</i>. If macOS says it “is damaged”, run <code>xattr -cr /Applications/DraftCAD.app</code> in Terminal.</li>
+        <li><b>Ubuntu / Debian:</b> <code>sudo apt install ./DraftCAD-Linux-amd64.deb</code></li>
+        <li><b>Fedora / RHEL:</b> <code>sudo dnf install ./DraftCAD-Linux-x86_64.rpm</code></li>
+        <li><b>AppImage:</b> <code>chmod +x DraftCAD-*.AppImage</code>, then double-click it.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="version">Always the latest version.</footer>
+
+  <script>
+    // Links use GitHub's "latest release" redirect, so they never need updating.
+    const REPO = 'equserteam/draftcad-download';
+    const base = `https://github.com/${REPO}/releases/latest/download/`;
+    document.querySelectorAll('.dl').forEach((a) => (a.href = base + a.dataset.file));
+
+    // Highlight and offer the right download for this visitor.
+    const ua = navigator.userAgent;
+    const platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
+    let os = null;
+    let file = null;
+    let label = '';
+    if (/Win/i.test(platform) || /Windows/i.test(ua)) {
+      os = 'win';
+      const arm = /ARM|aarch64/i.test(ua);
+      file = arm ? 'DraftCAD-Windows-Setup-arm64.exe' : 'DraftCAD-Windows-Setup-x64.exe';
+      label = 'Download for Windows';
+    } else if (/Mac/i.test(platform) || /Macintosh/i.test(ua)) {
+      os = 'mac';
+      file = 'DraftCAD-macOS-AppleSilicon.dmg';
+      label = 'Download for Mac';
+      document.getElementById('primary-sub').innerHTML = 'Apple Silicon (M1–M4). Older Intel Mac? <a href="' + base + 'DraftCAD-macOS-Intel.dmg">Intel version</a> · <a href="#all">all downloads</a>';
+    } else if (/Linux/i.test(platform) && !/Android/i.test(ua)) {
+      os = 'linux';
+      file = 'DraftCAD-Linux-amd64.deb';
+      label = 'Download for Ubuntu / Debian';
+    }
+    if (os) {
+      const btn = document.getElementById('primary');
+      btn.href = base + file;
+      btn.textContent = '⬇  ' + label;
+      document.getElementById('card-' + os).classList.add('mine');
+      document.querySelector('#card-' + os + ' h2').insertAdjacentHTML('beforeend', '<span class="badge">Your system</span>');
+    }
+
+    fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((rel) => {
+        if (rel) document.getElementById('version').textContent = `Version ${rel.tag_name.replace(/^v/, '')} · released ${new Date(rel.published_at).toLocaleDateString()}`;
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>
